@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/blood-moon.svg" alt="Blutroter Mond – BloodyEclipseAssistant" width="100%">
+  <img src="blood-moon.svg" alt="Blutroter Mond – BloodyEclipseAssistant" width="100%">
 </p>
 
 <p align="center">
