@@ -1,0 +1,40 @@
+# 🌑 TODO – BloodyEclipseAssistant
+
+> Lebendes Dokument. Haken setzen mit `- [x]`.
+
+## 🌑 Phase 0 – Fundament
+- [x] Repository anlegen
+- [ ] README mit Banner (blutroter Mond) einchecken
+- [ ] Programmiersprache & Projektstruktur festlegen
+- [ ] `.gitignore` (inkl. `.env`) und Lizenz hinzufügen
+- [ ] Konfiguration über Umgebungsvariablen / `.env`
+
+## 🌒 Phase 1 – Untis
+- [ ] Zugang zur Untis-Schnittstelle klären (WebUntis-Login, Schule, Server)
+- [ ] Stundenplan abrufen und parsen
+- [ ] Vertretungen und Unterrichtsausfälle erkennen
+- [ ] Daten in ein einheitliches internes Termin-Format überführen
+
+## 🌓 Phase 2 – Google Calendar
+- [ ] Google-Cloud-Projekt und OAuth-Zugang einrichten
+- [ ] Login-Flow (Token speichern, Refresh)
+- [ ] Termine lesen
+- [ ] Termine anlegen / aktualisieren / löschen
+
+## 🌔 Phase 3 – Assistenten-Logik
+- [ ] Konflikte zwischen Unterricht und Terminen erkennen
+- [ ] Freie Zeitfenster berechnen
+- [ ] „Halb-intelligente" Vorschläge (z. B. Lernzeit, Pausen)
+- [ ] Benachrichtigungen bei Vertretung / Ausfall
+
+## 🌕 Phase 4 – Feinschliff & Release
+- [ ] Tests und Fehlerbehandlung
+- [ ] Bedienoberfläche (CLI oder App)
+- [ ] Eclipse-Modus (Dark Theme in Blutrot)
+- [ ] Screenshots in die README
+- [ ] Erstes Release 🎉
+
+## 💡 Ideen-Speicher
+- [ ] Sprachsteuerung
+- [ ] Wochenübersicht als Bild / PDF
+- [ ] Widget für den Homescreen
