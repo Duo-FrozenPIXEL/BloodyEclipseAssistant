@@ -1,0 +1,25 @@
+# Zugangsdaten & Tokens – niemals committen
+.env
+credentials.json
+token.json
+secrets/
+
+# Laufzeitdaten
+data/
+*.sqlite3
+*.db
+voices/
+*.onnx
+*.onnx.json
+*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/

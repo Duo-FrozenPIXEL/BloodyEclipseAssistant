@@ -33,10 +33,19 @@ Er gleicht beides ab, erkennt Konflikte und hilft dir, den Überblick zu behalte
 | 📅 | Termine mit Google Calendar synchronisieren | 🔜 geplant |
 | ⚠️ | Konflikte zwischen Unterricht und Terminen erkennen | 🔜 geplant |
 | 🔔 | Erinnerungen bei Vertretung und Ausfall | 🔜 geplant |
+| 🗣️ | Sprachausgabe: sagt Tagesplan und Änderungen von selbst an | 🔜 geplant |
 | 🧠 | „Halb-intelligente" Vorschläge für freie Zeitfenster | 💡 Idee |
 | 🌑 | Eclipse-Modus (Dark Theme, natürlich blutrot) | 💡 Idee |
 
 > Den genauen Fortschritt findest du in der [**TODO.md**](TODO.md).
+
+## 🧭 Technische Pläne
+
+| Dokument | Inhalt |
+|---|---|
+| [**Gesamtplan**](docs/PLAN.md) | Technik-Entscheidungen, Architektur, Projektstruktur, Meilensteine |
+| [**Plan 01 – Untis ↔ Google Calendar**](docs/01-untis-google-sync.md) | Zugriff, Berechtigungen, Sync-Ablauf, Änderungs-Erkennung, Konflikte |
+| [**Plan 02 – Sprachausgabe**](docs/02-sprachausgabe.md) | Wann und wie der Assistent spricht, Stimme, Satzbau, Ansage-Regeln |
 
 ## 🗺️ So funktioniert's
 
@@ -47,6 +56,7 @@ flowchart LR
     A --> K[⚠️ Konflikt-Check]
     A --> V[💡 Vorschläge]
     A --> N[🔔 Benachrichtigungen]
+    A --> S[🗣️ Sprachausgabe]
     style A fill:#b30d12,stroke:#5a0508,color:#fff
 ```
 
@@ -57,6 +67,7 @@ flowchart LR
 🌒  Untis-Anbindung            ⬜
 🌓  Google-Calendar-Anbindung  ⬜
 🌔  Abgleich & Konflikt-Logik  ⬜
+🩸  Sprachausgabe & Assistenz  ⬜
 🌕  Release                    ⬜  ← Vollmond, aber blutrot
 ```
 
@@ -73,16 +84,18 @@ cd BloodyEclipseAssistant
 <details>
 <summary>🔐 Zugangsdaten (Platzhalter)</summary>
 
-Zugangsdaten gehören **nie** ins Repository. Lege sie in einer lokalen `.env`-Datei ab (steht in der `.gitignore`):
+Zugangsdaten gehören **nie** ins Repository. Kopiere [`.env.example`](.env.example) nach `.env` (steht in der `.gitignore`) und fülle sie aus:
 
 ```env
 UNTIS_SERVER=
 UNTIS_SCHOOL=
 UNTIS_USER=
 UNTIS_PASSWORD=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
+GOOGLE_CREDENTIALS_FILE=secrets/credentials.json
+GOOGLE_TOKEN_FILE=secrets/token.json
 ```
+
+Alle weiteren Einstellungen (Sync-Takt, Stimme, Ansagezeiten) stehen in der `.env.example`.
 
 </details>
 
